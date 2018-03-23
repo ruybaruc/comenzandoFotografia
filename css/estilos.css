@@ -1,0 +1,167 @@
+body{
+	background: #02010a;
+	font-family: 'Dancing Script', cursive;
+}
+
+#contenido{
+	width: 100%;
+	margin: auto;
+}
+
+img{
+	box-shadow: 2px 2px 5px #02010a;
+}
+
+@media (min-width: 900px){
+	#contenido{
+		width: 900px;
+	}
+	#cabecera{
+		padding: 3vh;
+	}
+	h1{
+		padding: 3%;
+		text-align: left !important;
+		display:inline;
+	}
+	nav{
+		float: right;
+		padding-top: 2vh;
+	}
+	footer, #img-secundaria, #galeria{
+		flex-direction: row !important;
+		flex-wrap: wrap;
+	}
+	#galeria img{
+		width: 33.33% !important;
+	}
+	footer div{
+		padding-top: 0 !important;
+	}
+}
+
+header{
+	background: #5b7989;
+	color: white;
+	border-radius: 10px 10px 0 0;
+	margin-bottom: 0;
+	
+	animation: iniAnim 1s;
+}
+h1{
+	text-shadow: 2px 5px 5px #02010a;
+	text-align: center;
+}
+ul {
+    margin:0;
+    padding:0vh;
+    list-style-type:none;
+    text-align:center;
+}
+li {
+    display:inline-block;
+	padding: 0 2vh 2vh 2vh;
+}
+a{
+	color: inherit;
+}
+body.inicio a.inicio, body.retratos a.retratos, body.paisajes a.paisajes{
+	text-decoration: none;
+}
+#img-central{
+	background:  #82c3a6;
+	padding: 3%;
+}
+#img-central img{
+	width: 100%;
+}
+#img-secundaria{
+	background: #d5c75f;
+	padding: 3%;
+	border-width: 1px;
+	display: flex;
+	flex-direction: column;
+}
+#img-secundaria div{
+	flex-basis: 50%;
+}
+#img-secundaria div img, #galeria img{
+	width: 100%;
+}
+#paisajes{
+	transition: transform 1s;
+}
+#paisajes:hover{
+	transform: rotate(10deg);
+}
+#retratos{
+	transition: transform 1s;
+}
+#retratos:hover{
+	transform: translate(20px, -5px);
+}
+#img-secundaria p{
+	color: black;
+	text-align: center;
+	font-weight: bold;
+	margin: 0;
+}
+#galeria{	
+	background: #d5c75f;
+	padding: 3%;
+	display: flex;
+	flex-direction: column;
+}
+#galeria img:first-child{
+	-webkit-filter:blur(10px);
+	filter:blur(10px);
+}
+#galeria img:nth-child(2n){
+	-webkit-filter:grayscale(100%);
+	filter:grayscale(100%);
+}
+#galeria img:nth-child(3){
+	-webkit-filter:sepia(90%);
+	filter:sepia(90%);
+}
+footer{
+	background: #C6d5c5;
+	border-radius: 0 0 10px 10px;
+	display: flex;
+	flex-direction: column;
+	padding:3%;
+}
+footer div{
+	padding-top: 4vh;
+	margin: 0;
+	flex-basis: 25%;
+}
+#contacto{
+	padding-top: 0;
+}
+footer div *{
+	margin: 0;
+}
+#redes div{
+	padding-top: 0;
+}
+
+#redes div img{
+	width: 20px;
+	box-shadow: 0 0;
+}
+#redes div p{
+	display: inline;
+}
+
+@-webkit-keyframes iniAnim{
+	0%{
+		margin-top: 150%;
+	}
+	60%{
+		margin-top: -5%;
+	}
+	100%{
+		margin-top: 0%;
+	}
+}
